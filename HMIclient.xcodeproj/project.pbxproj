@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EDAE2CDC2110D49E0076FB6B /* RestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAE2CD82110D49E0076FB6B /* RestController.swift */; };
+		EDAE2CDD2110D49E0076FB6B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAE2CD92110D49E0076FB6B /* Result.swift */; };
+		EDAE2CDE2110D49E0076FB6B /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAE2CDA2110D49E0076FB6B /* JSON.swift */; };
+		EDAE2CDF2110D49E0076FB6B /* Deserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAE2CDB2110D49E0076FB6B /* Deserializer.swift */; };
 		EDFEF21A210659900043524B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFEF219210659900043524B /* AppDelegate.swift */; };
 		EDFEF21C210659900043524B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFEF21B210659900043524B /* ViewController.swift */; };
 		EDFEF21F210659900043524B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDFEF21D210659900043524B /* Main.storyboard */; };
@@ -35,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EDAE2CD72110D49E0076FB6B /* RestEssentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestEssentials.h; sourceTree = "<group>"; };
+		EDAE2CD82110D49E0076FB6B /* RestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestController.swift; sourceTree = "<group>"; };
+		EDAE2CD92110D49E0076FB6B /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		EDAE2CDA2110D49E0076FB6B /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		EDAE2CDB2110D49E0076FB6B /* Deserializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deserializer.swift; sourceTree = "<group>"; };
 		EDFEF216210659900043524B /* HMIclient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HMIclient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDFEF219210659900043524B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDFEF21B210659900043524B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,9 +85,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EDAE2CD62110D3D40076FB6B /* RestEssentials */ = {
+			isa = PBXGroup;
+			children = (
+				EDAE2CDB2110D49E0076FB6B /* Deserializer.swift */,
+				EDAE2CDA2110D49E0076FB6B /* JSON.swift */,
+				EDAE2CD82110D49E0076FB6B /* RestController.swift */,
+				EDAE2CD72110D49E0076FB6B /* RestEssentials.h */,
+				EDAE2CD92110D49E0076FB6B /* Result.swift */,
+			);
+			path = RestEssentials;
+			sourceTree = "<group>";
+		};
 		EDFEF20D210659900043524B = {
 			isa = PBXGroup;
 			children = (
+				EDAE2CD62110D3D40076FB6B /* RestEssentials */,
 				EDFEF218210659900043524B /* HMIclient */,
 				EDFEF230210659920043524B /* HMIclientTests */,
 				EDFEF23B210659920043524B /* HMIclientUITests */,
@@ -152,6 +174,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDFEF244210659920043524B /* Build configuration list for PBXNativeTarget "HMIclientTests" */;
 			buildPhases = (
+				827D928E5B9906BB7B096A13 /* [CP] Check Pods Manifest.lock */,
 				EDFEF229210659920043524B /* Sources */,
 				EDFEF22A210659920043524B /* Frameworks */,
 				EDFEF22B210659920043524B /* Resources */,
@@ -170,6 +193,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDFEF247210659920043524B /* Build configuration list for PBXNativeTarget "HMIclientUITests" */;
 			buildPhases = (
+				97F610FC50BC09BCCE69E5D4 /* [CP] Check Pods Manifest.lock */,
 				EDFEF234210659920043524B /* Sources */,
 				EDFEF235210659920043524B /* Frameworks */,
 				EDFEF236210659920043524B /* Resources */,
@@ -254,12 +278,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		827D928E5B9906BB7B096A13 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HMIclientTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97F610FC50BC09BCCE69E5D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HMIclientUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EDFEF212210659900043524B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDAE2CDF2110D49E0076FB6B /* Deserializer.swift in Sources */,
 				EDFEF222210659900043524B /* HMIclient.xcdatamodeld in Sources */,
+				EDAE2CDD2110D49E0076FB6B /* Result.swift in Sources */,
+				EDAE2CDC2110D49E0076FB6B /* RestController.swift in Sources */,
+				EDAE2CDE2110D49E0076FB6B /* JSON.swift in Sources */,
 				EDFEF21C210659900043524B /* ViewController.swift in Sources */,
 				EDFEF21A210659900043524B /* AppDelegate.swift in Sources */,
 			);
@@ -367,7 +434,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -422,9 +489,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -439,10 +507,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y4JXT6R2QF;
 				INFOPLIST_FILE = HMIclient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
+				"PODS_CONFIGURATION_BUILD_DIR[arch=*]" = "${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				PRODUCT_BUNDLE_IDENTIFIER = dev.HMIclient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -457,10 +528,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y4JXT6R2QF;
 				INFOPLIST_FILE = HMIclient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.HMIclient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
